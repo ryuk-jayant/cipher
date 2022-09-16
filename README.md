@@ -1,2 +1,2 @@
 # trifidcipher
-you can read about algorithem from doc provided in repo
+you can read about algorithm from doc provided in repo
