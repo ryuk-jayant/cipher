@@ -25,11 +25,14 @@ class matrix{
 vector<vector<vector<char>>> v;
 vector<vector<int>> code;
 vector<int> mixedcode;
-int count;
+
+int count,key;
 public:
 	
 	//vector<int>
 	matrix(){//constructor wo
+		cout<<"enter your key(a no.)"<<"\n";
+		cin>>key;
 		count=0;
 		v={
 	{
@@ -112,6 +115,7 @@ void matrix::stringcode(string s){
 void matrix::syboler(){
 
 	mixedcode=mixingarr();
+	if(key==1){
 	for(auto i=mixedcode.begin();i!=mixedcode.end();i++){
 		if(*i==1){
 			cout<<".";
@@ -123,6 +127,20 @@ void matrix::syboler(){
 			cout<<"/";
 		}
 	}
+}
+else{
+	for(auto i=mixedcode.begin();i!=mixedcode.end();i++){
+		if(*i==1){
+			cout<<"_";
+		}
+		else if(*i==2){
+			cout<<".";
+		}
+		else{
+			cout<<"\\";
+		}
+	}
+}
 }
 int main()
 {
